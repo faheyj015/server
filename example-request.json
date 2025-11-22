@@ -1,0 +1,907 @@
+{
+  "input": {
+    "workflow": {
+      "85": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "103",
+            0
+          ],
+          "positive": [
+            "98",
+            0
+          ],
+          "negative": [
+            "98",
+            1
+          ],
+          "latent_image": [
+            "86",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "86": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "104",
+            0
+          ],
+          "positive": [
+            "98",
+            0
+          ],
+          "negative": [
+            "98",
+            1
+          ],
+          "latent_image": [
+            "98",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "87": {
+        "inputs": {
+          "samples": [
+            "85",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "89": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "93": {
+        "inputs": {
+          "text": "A man appears and she sucks his penis"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "98": {
+        "inputs": {
+          "value": 720,
+          "positive": [
+            "93",
+            0
+          ],
+          "negative": [
+            "89",
+            0
+          ],
+          "start_image": [
+            "224",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "103": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "104": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "121": {
+        "inputs": {
+          "images": [
+            "87",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "123": {
+        "inputs": {
+          "Video_A": [
+            "87",
+            0
+          ],
+          "Video_B": [
+            "144",
+            0
+          ]
+        },
+        "class_type": "VideoMerge",
+        "_meta": {
+          "title": "VideoMerge"
+        }
+      },
+      "124": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "125": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "128": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "129": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "124",
+            0
+          ],
+          "positive": [
+            "138",
+            0
+          ],
+          "negative": [
+            "138",
+            1
+          ],
+          "latent_image": [
+            "142",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "136": {
+        "inputs": {
+          "text": "A sexy woman is giving a man a blowjob and a handjob. The man is out of frame. She is in front of the man. She is giving him a blowjob, while simultaneously giving a handjob. She is performing fellatio while stroking the shaft of his penis with one hand."
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "138": {
+        "inputs": {
+          "value": 640,
+          "positive": [
+            "136",
+            0
+          ],
+          "negative": [
+            "125",
+            0
+          ],
+          "start_image": [
+            "121",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "142": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "128",
+            0
+          ],
+          "positive": [
+            "138",
+            0
+          ],
+          "negative": [
+            "138",
+            1
+          ],
+          "latent_image": [
+            "138",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "144": {
+        "inputs": {
+          "samples": [
+            "129",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "147": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "148": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "151": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "152": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "147",
+            0
+          ],
+          "positive": [
+            "163",
+            0
+          ],
+          "negative": [
+            "163",
+            1
+          ],
+          "latent_image": [
+            "159",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "155": {
+        "inputs": {
+          "images": [
+            "156",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "156": {
+        "inputs": {
+          "samples": [
+            "152",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "157": {
+        "inputs": {
+          "value": 16,
+          "images": [
+            "158",
+            0
+          ]
+        },
+        "class_type": "CreateVideo",
+        "_meta": {
+          "title": "CreateVideo"
+        }
+      },
+      "158": {
+        "inputs": {
+          "Video_A": [
+            "209",
+            0
+          ],
+          "Video_B": [
+            "156",
+            0
+          ]
+        },
+        "class_type": "VideoMerge",
+        "_meta": {
+          "title": "VideoMerge"
+        }
+      },
+      "159": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "151",
+            0
+          ],
+          "positive": [
+            "163",
+            0
+          ],
+          "negative": [
+            "163",
+            1
+          ],
+          "latent_image": [
+            "163",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "162": {
+        "inputs": {
+          "text": "tongue job. Girlis slowly and expressivels licking the head of the penis. f4c3spl4sh, She starts recieving a cumshot on her face from the penis. The stream of white semen is directed towards her mouth. The force of the ejaculation is strong, and the trajectory excessive cum covering a significant portion of her face. The woman's eyes are open, and she continues to lick the penis forcefully while she receives the semen.The semen is seen forcefully erupting from the penis and landing in her hair."
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "163": {
+        "inputs": {
+          "value": 640,
+          "positive": [
+            "162",
+            0
+          ],
+          "negative": [
+            "148",
+            0
+          ],
+          "start_image": [
+            "215",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "165": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "166": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "169": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "170": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "165",
+            0
+          ],
+          "positive": [
+            "179",
+            0
+          ],
+          "negative": [
+            "179",
+            1
+          ],
+          "latent_image": [
+            "176",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "173": {
+        "inputs": {
+          "samples": [
+            "170",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "175": {
+        "inputs": {
+          "Video_A": [
+            "123",
+            0
+          ],
+          "Video_B": [
+            "173",
+            0
+          ]
+        },
+        "class_type": "VideoMerge",
+        "_meta": {
+          "title": "VideoMerge"
+        }
+      },
+      "176": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "169",
+            0
+          ],
+          "positive": [
+            "179",
+            0
+          ],
+          "negative": [
+            "179",
+            1
+          ],
+          "latent_image": [
+            "179",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "179": {
+        "inputs": {
+          "value": 640,
+          "positive": [
+            "180",
+            0
+          ],
+          "negative": [
+            "166",
+            0
+          ],
+          "start_image": [
+            "182",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "180": {
+        "inputs": {
+          "text": "A sexy woman is giving a man a blowjob and a handjob. The man is out of frame. She is in front of the man. She is giving him a blowjob, while simultaneously giving a handjob. She is performing fellatio while stroking the shaft of his penis with one hand."
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "182": {
+        "inputs": {
+          "images": [
+            "144",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "184": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "185": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "188": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "189": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "184",
+            0
+          ],
+          "positive": [
+            "198",
+            0
+          ],
+          "negative": [
+            "198",
+            1
+          ],
+          "latent_image": [
+            "195",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "192": {
+        "inputs": {
+          "samples": [
+            "189",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "194": {
+        "inputs": {
+          "Video_A": [
+            "175",
+            0
+          ],
+          "Video_B": [
+            "192",
+            0
+          ]
+        },
+        "class_type": "VideoMerge",
+        "_meta": {
+          "title": "VideoMerge"
+        }
+      },
+      "195": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "188",
+            0
+          ],
+          "positive": [
+            "198",
+            0
+          ],
+          "negative": [
+            "198",
+            1
+          ],
+          "latent_image": [
+            "198",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "198": {
+        "inputs": {
+          "value": 640,
+          "positive": [
+            "199",
+            0
+          ],
+          "negative": [
+            "185",
+            0
+          ],
+          "start_image": [
+            "200",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "199": {
+        "inputs": {
+          "text": "A sexy woman is giving a man a blowjob and a handjob. The man is out of frame. She is in front of the man. She is giving him a blowjob, while simultaneously giving a handjob. She is performing fellatio while stroking the shaft of his penis with one hand."
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "200": {
+        "inputs": {
+          "images": [
+            "173",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "202": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "203": {
+        "inputs": {
+          "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Negative Prompt)"
+        }
+      },
+      "204": {
+        "inputs": {
+          "value": 5.000000000000001
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+          "title": "ModelSamplingSD3"
+        }
+      },
+      "205": {
+        "inputs": {
+          "text": "disable",
+          "model": [
+            "202",
+            0
+          ],
+          "positive": [
+            "213",
+            0
+          ],
+          "negative": [
+            "213",
+            1
+          ],
+          "latent_image": [
+            "210",
+            0
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "209": {
+        "inputs": {
+          "Video_A": [
+            "194",
+            0
+          ],
+          "Video_B": [
+            "216",
+            0
+          ]
+        },
+        "class_type": "VideoMerge",
+        "_meta": {
+          "title": "VideoMerge"
+        }
+      },
+      "210": {
+        "inputs": {
+          "text": "enable",
+          "model": [
+            "204",
+            0
+          ],
+          "positive": [
+            "213",
+            0
+          ],
+          "negative": [
+            "213",
+            1
+          ],
+          "latent_image": [
+            "213",
+            2
+          ]
+        },
+        "class_type": "KSamplerAdvanced",
+        "_meta": {
+          "title": "KSamplerAdvanced"
+        }
+      },
+      "213": {
+        "inputs": {
+          "value": 640,
+          "positive": [
+            "214",
+            0
+          ],
+          "negative": [
+            "203",
+            0
+          ],
+          "start_image": [
+            "217",
+            0
+          ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+          "title": "WanImageToVideo"
+        }
+      },
+      "214": {
+        "inputs": {
+          "text": "A sexy woman is giving a man a blowjob and a handjob. The man is out of frame. She is in front of the man. She is giving him a blowjob, while simultaneously giving a handjob. She is performing fellatio while stroking the shaft of his penis with one hand."
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Positive Prompt)"
+        }
+      },
+      "215": {
+        "inputs": {
+          "images": [
+            "216",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "216": {
+        "inputs": {
+          "samples": [
+            "205",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "217": {
+        "inputs": {
+          "images": [
+            "192",
+            0
+          ]
+        },
+        "class_type": "FinalFrameSelector",
+        "_meta": {
+          "title": "FinalFrameSelector"
+        }
+      },
+      "224": {
+        "inputs": {
+          "image": "__INPUT_FILENAME__"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "Load Image (BOT INPUT)"
+        }
+      },
+      "225": {
+        "inputs": {
+          "text": "tg_bot_result",
+          "video": [
+            "157",
+            0
+          ]
+        },
+        "class_type": "SaveVideo",
+        "_meta": {
+          "title": "SaveVideo"
+        }
+      }
+    }
+  }
+}
